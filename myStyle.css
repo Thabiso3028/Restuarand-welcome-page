@@ -13,10 +13,14 @@
     --small-font-weight: 100;
     --detailing-color: tomato;
     --span-color: teal;
+    --quick-transission: 0.2s;
 }
 body{
     background-color: var(--bright-txt-color);
     font-size: var(normal-font-size);
+}
+html{
+    max-width: auto;
 }
 span{
     color: var(--span-color);
@@ -43,19 +47,18 @@ span{
     padding: 10px 30px 10px 30px;
     justify-content: space-between;
     align-items: center;
-
 }
 .header.sticky{
     background: var(--detailing-color);
     box-shadow: 0 5px 20px rgba(0,0,0,0.05);
   }
-.header.sticky .nav .nav-bar li a:hover{
-    transition: 0.5s;
-    color: #292929;
+.header.sticky nav .nav-bar li a:hover{
+    transition: 0.2s;
+    color: black;
   }
 #nav1{
     width: auto;
-    transition: all 0.01s;
+    transition: all var(--quick-transission);
 }
 .header .nav-bar li a:hover{
     color: var(--detailing-color);
@@ -112,13 +115,15 @@ span{
 .container-1 .content{
     height: 100%;
     padding: 20%;
-    
 }
 .content h1{
-    font-size:40px;
     color: var(--detailing-color);
+}
+.welcome-txt .container-1 .content h1{
     padding-top: 20px;
     padding-bottom: 35px;
+    font-size:40px;
+    
 }
 .content .btn{
     text-decoration: none;
@@ -128,7 +133,7 @@ span{
     padding: 2% 4%;
     border-radius: 5px;
     background-color: var(--detailing-color);
-    transition: 0.2s;
+    transition: var(--quick-transission);
 }
 .btn:hover{
     background-color: var(--span-color);
@@ -140,25 +145,26 @@ span{
     z-index: -1;
     position: relative;
     width: 100%;
-    max-height: fit-content;
+    height:auto;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     text-align: justify;
-   
+    padding: 10px 20px;
+    margin-top: 90px;
+    margin-bottom: 90px;
+    
 }
-.container .about-txt{
+.About .container .content{
     position: relative;
     width: 48%;
     height: 300px;
- 
-    padding: 30px 30px;
+    padding: 10px 40px;
 }
 .container .about-image{
     position: relative;
     width: 48%;
-    min-height: 300px;
-
+    height: 300px;
 }
 .container .about-image img{
     position: absolute;
@@ -168,10 +174,45 @@ span{
     top: 0;
     left: 0;
 }
-.about-txt h1{
+.content h1{
     margin: 20px;
 }
-.about-txt p{
+.container .content p{
     font-size: var(--normal-font-size);
     font-weight: 200;
 }
+
+/* Services */
+
+.services{
+    position: absolute;
+    z-index: -1;
+    text-align: center;
+    align-items: center; 
+    width: 100%;
+    height: 100%;
+}
+
+.services .container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+.services .container .box1{
+    position: relative;
+    width: 260px;
+    padding: 20px;
+    margin: 15px;
+    text-align: justify;
+    background: #fff;
+    box-shadow: 0 5px 35px rgba(0,0,0,0.08);   
+}
+.services .container .box1:hover{
+    transition: 0.5s 0.2s;
+    transform: scaleY(1.1);
+  }
+  .services .container .box1 img{
+  width: 50px;
+  }
