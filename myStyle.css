@@ -140,23 +140,25 @@ span{
     z-index: -1;
     position: relative;
     width: 100%;
+    max-height: fit-content;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     text-align: justify;
-    border: 1px dotted red;
+   
 }
 .container .about-txt{
     position: relative;
     width: 48%;
-    border: 3px solid yellow;
+    height: 300px;
+ 
     padding: 30px 30px;
 }
 .container .about-image{
     position: relative;
     width: 48%;
-    height: 300px;
-    border: 3px solid pink;
+    min-height: 300px;
+
 }
 .container .about-image img{
     position: absolute;
